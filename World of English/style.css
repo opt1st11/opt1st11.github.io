@@ -1,0 +1,549 @@
+*{
+	margin:0;
+	padding:0;
+	user-select: none;
+}
+a {
+	text-decoration:none;
+}
+li {
+	text-decoration:none;
+	list-style:none;
+}
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	background: #fff;/*color*/
+	overflow-x:hidden;
+}
+header {
+	background: #fff;/*color*/
+}
+.logo {
+	background:black;
+	width: 100%;
+	display:flex;
+	justify-content:center;
+	display:block;
+}
+.border-bottom {
+	width: 100vw;
+	height: 3px;
+	background: black;
+}
+.header_image {
+	width: 100vw;
+	max-width: 100vw;
+	height: 200px;
+	padding:1px;
+	box-sizing:border-box;
+}
+nav {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 50px;
+	margin-bottom: 20px;
+}
+.topnav {
+	font-size: 14px;
+	margin-top: 20px;
+}
+.topnav a {
+	color:#000;
+	text-align: center;
+	padding: 14px 25px;
+	font-size:16px;
+	font-weight: bold;
+}
+.topnav a:hover {
+	border-bottom: 2px solid #000;
+	color:#FF9800;
+	transition:0.2s;
+}.topnav .icon {
+	display: none;
+}
+@media screen and (max-width: 1200px) {
+	.topnav a:not(:first-child) {
+		display: none;
+	}
+	.topnav a.icon {
+		float: right;
+		margin-top: -17px;
+		display: block;
+		color:black;
+	}
+	nav {
+		width: 100%;
+		height: 100px;
+	}
+	.topnav.responsive {
+		position: relative;
+	}
+	.topnav.responsive a.icon {
+		position: absolute;
+		right: 0;
+		top:0;
+	}
+	.topnav.responsive a{
+		float: none;
+		display: block;
+		text-align: left;
+	}
+	.header_image {
+		width:1150px;
+		height: 300px;
+	}
+}
+@media screen and (max-width: 950px) {
+	.header_image {
+		width:1150px;
+		height: 250px;
+	}
+	.blog-container {
+		width: 28rem;
+	}
+}
+@media screen and (max-width: 630px) {
+	.header_image {
+		width:1150px;
+		height: 200px;
+	}
+}
+@media screen and (max-width: 350px) {
+	.header_image {
+		width:1150px;
+		height: 150px;
+	}
+	.blog-container {
+		width: 20rem;
+	}
+}
+@media screen and (max-width: 250px) {
+	.header_image {
+		display: none;
+	}
+}
+.container_feed {
+	width: 200px;
+	height: auto;
+	/*border:2px solid red;*/
+	float: right;
+}
+.dnevnik {
+	margin-top: 20px;
+	width: 100%;
+	transform: translateX(-35px);
+	height:70px;
+	background:url(image/logo.png);
+	background-size:100% 100%;
+}
+.fipi {
+	margin-top: 20px;
+	width: 100%;
+	transform: translateX(0px);
+	height:70px;
+	background:url(image/logo2.png);
+	background-repeat: no-repeat;
+	background-size:70% 70%;
+}
+.umic {
+	margin-top: 20px;
+	width: 100%;
+	height:70px;
+	background:url(image/logo3.jpg);
+	background-size:70% 70%;
+	background-repeat: no-repeat;
+}
+.link_text {
+	margin:5px 0 5px 0;
+	font-weight: bold;
+}
+.blog-container {
+	color:#3A3B3F;
+	background: #EDEDED;
+	border-right:5px;
+	box-shadow: rgba(0,0,0,0.2) 0 6px 2px -2px;
+	font-weight: 100;
+	margin:48px auto;
+	width: 50rem;
+	font-size:20px;
+	padding-bottom: 20px;
+}
+.blog-cover {
+	background: url(image/cover.jpg) ;
+	background-size:100% 140%;
+	background-repeat: no-repeat;
+	border-radius: 5px 5px 0 0;
+	height: 15rem;
+	margin-bottom: 4px;
+	box-shadow: inset rgba(0,0,0,0.2) 0 64px 64px 16px;
+}
+.blog-body {
+	margin:0 auto;
+	width: 80%;
+}
+.photo {
+	width: 200px;
+	height: 200px;
+	border:2px solid white;
+	border-radius: 10px;
+	margin-top: 20px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.quotation {
+	float: right;
+	margin-top: 30px;
+	font-size: 18px;
+
+}
+.span1 {
+	float: right;
+	margin-top: 5px;
+	font-weight:bolder;
+}
+.red-text {
+	color:#8B0E11;
+}
+.main_text {
+	padding-top:20px;
+}
+.text_1 {
+	padding-top:20px;
+}
+.quotation_2 {
+	text-align: right;
+	margin-top: 10px;
+	color:#8B0E11;
+}
+/*calendar*/
+#calendar2 {
+  width: 100%;
+  height:auto;
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  display: block;/*no visible*/
+}
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: rgb(85, 85, 85);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar2 tbody td {
+  color: rgb(44, 86, 122);
+}
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+  color: rgb(231, 140, 92);
+}
+#calendar2 tbody td.today {
+  background: rgb(220, 0, 0);
+  color: #fff;
+}
+/*calendar*/
+footer {
+	width: 100%;
+	height:auto;
+	background: black;
+	margin:0 auto;
+	text-align: center;
+	padding-top: 25px;
+}
+footer a {
+	color:white;
+	font-size: 14px;
+	margin-left: 25px;
+}
+footer a:hover {
+	border-bottom:1px solid white;
+
+}
+footer p {
+	color:white;
+	font-size: 14px;
+	font-style:italic;
+}
+/*about(page2)*/
+.blog-cover-about {
+	background: url(image/cover_page_2.jpg) ;
+	background-size:100% 140%;
+	background-repeat: no-repeat;
+	border-radius: 5px 5px 0 0;
+	height: 15rem;
+	margin-bottom: 4px;
+	box-shadow: inset rgba(0,0,0,0.2) 0 64px 64px 16px;
+}
+.about-self {
+	text-align: center;
+	font-size:17px;
+	margin-top:20px;
+	margin-bottom: 20px;
+	font-weight:700;
+}
+.main_text_about {
+	
+}
+.photo_2 {
+	width: 275px;
+	height: 250px;
+	border:2px solid white;
+	border-radius: 10px;
+	float: right;
+	background: url(image/photo_2.jpg);
+	background-size:140% 100%;
+	margin-right:10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.main_text_about_3 {
+	
+}
+.photo_3 {
+	width: 100%;
+	height: 400px;
+	border:2px solid white;
+	border-radius: 10px;
+	margin-top: 20px;
+	background: url(image/photo_3.jpg);
+	background-size:100% 100%;
+	margin-right:10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.main_text_about_3 {
+
+}
+video {
+	margin-top: 20px;
+	width: 100%;
+	height:100%;
+}
+.photo_4 {
+	width: 350px;
+	height: 250px;
+	border:2px solid white;
+	border-radius: 10px;
+	float: right;
+	background: url(image/photo_4.jpg);
+	background-size:100% 100%;
+	margin-right:10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.photo_5 {
+	width: 100%;
+	height: 450px;
+	border:2px solid white;
+	border-radius: 10px;
+	margin-top: 20px;
+	background: url(image/photo_5.jpg);
+	background-size:100% 100%;
+	margin-right:10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.photo_6 {
+	width: 100%;
+	height: 450px;
+	border:2px solid white;
+	border-radius: 10px;
+	margin-top: 20px;
+	background: url(image/photo_6.jpg);
+	background-size:100% 100%;
+	margin-right:10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.photo_7 {
+	width: 100%;
+	height: 750px;
+	border:2px solid white;
+	border-radius: 10px;
+	margin-top: 20px;
+	background: url(image/photo_7.jpg);
+	background-size:100% 100%;
+	margin-right:10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.photo_8 {
+	width: 100%;
+	height: 450px;
+	border:2px solid white;
+	border-radius: 10px;
+	margin-top: 20px;
+	background: url(image/photo_8.jpg);
+	background-size:100% 100%;
+	margin-right:10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.blog-cover-portfolio {
+	background: url(image/cover_page_3.jpg) ;
+	background-size:100% 140%;
+	background-repeat: no-repeat;
+	border-radius: 5px 5px 0 0;
+	height: 15rem;
+	margin-bottom: 4px;
+	box-shadow: inset rgba(0,0,0,0.2) 0 64px 64px 16px;
+}
+.portfolio-teacher {
+	text-align: center;
+	margin:20px 0;
+}
+.photo-itm1 img {
+	cursor:pointer;
+	width: 200px;
+	height: 200px;
+	margin:4px 3px;
+	border:2px solid silver;
+	opacity:1;
+	transition: .3s;
+}
+.photo-itm1 img:hover {
+	opacity:1;
+	border:2px solid black;
+	transform: scale(1.2);
+}
+.left {
+	margin-right:20px;
+	color:#E5703C;
+	cursor:pointer;
+}
+.right {
+	margin-left:20px;
+	cursor:pointer;
+}
+.left:active {
+	opacity: 0.6;
+}
+.right:active {
+	opacity: 0.6;
+}
+.photo-itm2 img {
+	cursor: pointer;
+	width: 200px;
+	height: 200px;
+	margin:4px 3px;
+	border:2px solid silver;
+	opacity:1;
+	transition: .3s;
+}
+.photo-itm2 img:hover {
+	opacity:1;
+	border:2px solid black;
+	transform: scale(1.2);
+}
+.slider{
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+    height: auto;
+    margin-bottom: 15px;
+    
+    border-radius:10px;
+}
+/* Картинка масштабируется по отношению к родительскому элементу */
+.slider .item img {
+   /* заполняем картинкой поле с сохранением пропорций */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: none !important;
+    border:2px solid silver;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* Фон кнопок вперед и назад при наведении */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* надпись */
+.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста горизонтально и по вертикально*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тень текста*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+/* Кружочки под слайдами */
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+ 
+a {
+text-decoration: none;
+color: white;
+}
+.blog-cover-mat {
+	background:url(image/cover_page_4.jpg);
+	background-size:100% 140%;
+	background-repeat: no-repeat;
+	border-radius: 5px 5px 0 0;
+	height: 15rem;
+	margin-bottom: 4px;
+	box-shadow: inset rgba(0,0,0,0.2) 0 64px 64px 16px;
+}
+.mat {
+	color:#E5703C;
+}
+.mat:hover {
+	color:#FBC71A;
+}
